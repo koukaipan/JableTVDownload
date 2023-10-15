@@ -20,7 +20,8 @@ parser = get_parser()
 args = parser.parse_args()
 
 if(len(args.url) != 0):
-    process_single_job(args, args.url)
+    for i in range(len(args.url)):
+        process_single_job(args, args.url[i])
 elif(args.random == True):
     url = av_recommand()
     process_single_job(args, url)

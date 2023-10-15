@@ -11,7 +11,7 @@ def get_parser():
     parser = argparse.ArgumentParser(description="Jable TV Downloader")
     parser.add_argument("--random", type=bool, default=False,
                         help="Enter True for download random ")
-    parser.add_argument("--url", type=str, default="",
+    parser.add_argument("--url", type=str, default="", nargs='+',
                         help="Jable TV URL to download")
     parser.add_argument("--all-urls", type=str, default="",
                         help="Jable URL contains multiple avs")
